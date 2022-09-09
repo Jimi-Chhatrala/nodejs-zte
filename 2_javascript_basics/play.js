@@ -135,6 +135,7 @@ console.log(hobbies);
 
 // ************************************************************************
 
+/*
 const hobbies = ["Sports", "Cooking"];
 const copiedArray = [...hobbies];
 // const copiedArray = hobbies.slice();
@@ -162,3 +163,33 @@ const toArray2 = (...args) => {
 };
 
 console.log(toArray2(1, 2, 3, 4, 5));
+*/
+
+// ************************************************************************
+
+// destructuring
+
+// ************************************************************************
+
+const person = {
+  name: "Max",
+  age: 29,
+  greet() {
+    console.log("Hi, I am " + this.name);
+  },
+};
+
+// const printName = (personData) => {
+const printName = ({ name }) => {
+  // console.log(personData.name);
+  console.log(name);
+};
+
+printName(person);
+
+const { name, age } = person;
+console.log(name, age);
+
+const hobbies = ["Sports", "Cooking"];
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
